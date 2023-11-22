@@ -1,7 +1,19 @@
-steps:
-- uses: actions/checkout@v4
-- uses: actions/setup-node@v4
-  with:
-    node-version: 18
-- run: npm ci
-- run: npm test
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  myjob:
+    name: deploy to staging
+    runs-on:  ubuntu-18.04
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Install Dependencies
+        run: npm install
+  
