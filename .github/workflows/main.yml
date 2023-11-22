@@ -10,7 +10,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0   
       - name: show ls
-        run: ls
+        run: cd ../..
       - name: Install Dependencies
         run: npm install
   
