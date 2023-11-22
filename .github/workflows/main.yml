@@ -5,7 +5,7 @@ on:
 jobs:
   myjob:
     name: deploy to staging
-    runs-on:  ubuntu-18.04
+    runs-on:  ubuntu-latest
     steps:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0 
