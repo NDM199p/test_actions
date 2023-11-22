@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Show ls
-        run: ls -la
+        run: ls
       - name: Install Dependencies
         run: npm install
   
